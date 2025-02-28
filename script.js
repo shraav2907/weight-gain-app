@@ -23,23 +23,23 @@ function calculateCalories() {
 }
 function generateDiet(){
     let meals = ["Apple crumble", "Roast Chicken", "Vegetable Curry", "Ramen", "salad", "Homemade burger", "Peanut Butter and pickle sandwich" ]
-    let comparison = ["3 and a half eggs", "A banana milkshake", "A tablespoon of orange juice", "The essence of a cookie", "100g ofoxygen", "a 500g salt rock"] 
+    let comparison = ["3 and a half eggs", "A banana milkshake", "A tablespoon of orange juice", "The essence of a cookie", "100g of oxygen", "a 500g salt rock"] 
     let ingredients = ["Fresh Duck", "carrots", "a scoop of sand","mud","fish", "potatos", "2 eggs", "Ripe Mangos", "Apple crumble", "1/7 potatos", "sliced gerkins", "Lentils", "guava", "a red onion", "Miso soup", "probably noodles", "water", "milk", "1/3 of a grain of sugar"]
-    let meal_ingredients = getRandomIngredients(ingredients,Math.floor(Math.random() * ingredients.length ));
+    let meal_ingredients = getRandomIngredients(ingredients,Math.floor(Math.random() * ingredients.length )+1);
 
     
 
     document.getElementById("meal-output").innerText = `Here is an ideal meal: ${meals[Math.floor(Math.random() * meals.length)]} `;
     
-    
+    /** 
     document.getElementById("ingredients-output").innerText = `Here is a list of the ingredients you will need:
         -${ingredients[Math.floor(Math.random() * ingredients.length)]}
         -${ingredients[Math.floor(Math.random() * ingredients.length)]}
         -${ingredients[Math.floor(Math.random() * ingredients.length)]} 
         -${ingredients[Math.floor(Math.random() * ingredients.length)]}
         -${ingredients[Math.floor(Math.random() * ingredients.length)]}`; 
-  
-    /** 
+        */
+    
     function generateDiet() {
         // Create an empty string to hold the formatted list of ingredients
         let ingredientsList = "Here is a list of the ingredients you will need:\n";
@@ -52,8 +52,8 @@ function generateDiet(){
         // Update the HTML with the formatted list of ingredients
         document.getElementById("ingredients-output").innerText = ingredientsList;
     }
-    */
-    //document.getElementById("ingredients-output").innerText = `Here is a list of the ingredients you will need:`; 
+    
+    generateDiet() 
 
     document.getElementById("comparison-output").innerText = `The number of calories is approximately equivelent to: ${comparison[Math.floor(Math.random() * comparison.length)]}`;
 
@@ -66,7 +66,7 @@ function getRandomIngredients(ingredients, numberOfItems) {
     // Make sure the number of items is less than or equal to the length of the ingredients array
     if (numberOfItems > ingredients.length) {
     
-        numberOfItems= 1
+        numberOfItems= 2
     }
 
     // Pick 'numberOfItems' random elements from the ingredients array
