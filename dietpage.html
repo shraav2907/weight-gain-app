@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>    <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your meal plan</title>
+    <title>Your Meal Plan</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <header>
         <h1>Let's find the right meal for you!</h1>
-    
     </header>
 
     <section class="Generate meal">
-        <button onclick="generateDiet()">Generate random recipe</button>
+        <button onclick="generateDiet()">Generate Random Recipe</button>
         <div id="output-plan">
-            <p id="meal-output" > </p> 
+            <div class="widget">
+                <h2>Meal Suggestion</h2>
+                <p id="meal-output">Loading...</p>
             </div>
-
+            <div class="widget">
+                <h2>Ingredients</h2>
+                <p id="ingredients-output">Loading...</p>
+            </div>
+            <div class="widget">
+                <h2>Calorie Comparison</h2>
+                <p id="comparison-output">Loading...</p>
+            </div>
+        </div>
     </section>
+
     <script src="script.js"></script>
+
 </body>
 </html>
