@@ -23,7 +23,7 @@ function calculateCalories() {
 }
 function generateDiet(){
     let meals = ["Apple crumble", "Roast Chicken", "Vegetable Curry", "Ramen", "salad", "Hommade burger", "Peanut Butter and pickle sandwich" ]
-    let ingredients = ["Apple crumble", "Banana", "Orange", "Mango"]
+    
     let comparison = ["3 and a half eggs", "A banana milkshake", "A tablespoon of orange juice", "The colour green", "a 500g salt rock"]
     
     document.getElementById("meal-output").innerText = `Here is an ideal meal:`;
