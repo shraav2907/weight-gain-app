@@ -23,5 +23,8 @@ function calculateCalories() {
 }
 function generateDiet(){
 
+    document.getElementById("meal-output").innerText = `Here is an ideal meal:`;
+
+
 }
 
