@@ -24,7 +24,7 @@ function calculateCalories() {
 function generateDiet(){
     let meals = ["Apple crumble", "Roast Chicken", "Vegetable Curry", "Ramen", "salad", "Homemade burger", "Peanut Butter and pickle sandwich" ]
     let comparison = ["3 and a half eggs", "A banana milkshake", "A tablespoon of orange juice", "The colour green", "a 500g salt rock"] 
-    let ingredients = ["Fresh Duck, carrots, fish, potatos and an egg, Ripe Mangos, Apple crumble, potatos, sliced gerkins, Lentils, guava, a red onion, Miso soup, probably noodles, water, milk"]
+    let ingredients = ["Fresh Duck", "carrots, fish", "potatos", "2 eggs", "Ripe Mangos", "Apple crumble", "1/7 potatos", "sliced gerkins", "Lentils", "guava", "a red onion", "Miso soup", "probably noodles", "water", "milk", "1/3 of a grain of sugar"]
 
     
 
