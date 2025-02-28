@@ -5,7 +5,7 @@ function calculateCalories() {
     let activityLevel = parseFloat(document.getElementById("activity").value);
 
     if (isNaN(weight) || isNaN(height) || isNaN(age) || activityLevel === NaN) {
-        alert("Please fill in all fields correctly.");
+        alert("Please fill in all fields lscorrectly.");
         return;
     }
 
@@ -22,7 +22,7 @@ function calculateCalories() {
     document.getElementById("calories-output").innerText = `To gain weight, you should consume approximately ${Math.round(dailyCalories)} calories per day.`;
 }
 function generateDiet(){
-
+    <a href="dietpage.html">Product 1</a>
 
 }
 function generateExercise(){
