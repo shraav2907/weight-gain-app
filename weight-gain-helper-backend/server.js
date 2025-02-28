@@ -1,52 +1,63 @@
-require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-const User = require('./models/User');
-const Meal = require('./models/Meal');
-
+// Initialize Express
 const app = express();
-const PORT = process.env.PORT || 5000;
-
-// Middleware
 app.use(cors());
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect('mongodb://localhost:27017/fitnessDB', {
     useNewUrlParser: true,
     useUnifiedTopology: true
-})
-.then(() => console.log("MongoDB connected"))
-.catch(err => console.error("MongoDB connection error:", err));
+}).then(() => console.log("MongoDB Connected"))
+.catch(err => console.error(err));
+
+// Define User Schema
+const userSchema = new mongoose.Schema({
+    weight: Number,
+    height: Number,
+    age: Number,
+    activityLevel: Number,
+    dailyCalories: Number
+});
+
+const User = mongoose.model('User', userSchema);
+
+// Define Meal Schema
+const mealSchema = new mongoose.Schema({
+    dailyCalories: Number,
+    mealSuggestion: String
+});
+
+const Meal = mongoose.model('Meal', mealSchema);
 
 // Route to save user data
 app.post('/save-user', async (req, res) => {
     try {
-        const { weight, height, age, activityLevel, dailyCalories } = req.body;
-        const newUser = new User({ weight, height, age, activityLevel, dailyCalories });
+        const newUser = new User(req.body);
         await newUser.save();
-        res.json({ message: "User data saved successfully!" });
+        res.json({ message: 'User data saved', user: newUser });
     } catch (error) {
-        res.status(500).json({ error: "Failed to save user data" });
+        res.status(500).json({ error: error.message });
     }
 });
 
-// Route to save meal suggestions
+// Route to save meal suggestion
 app.post('/save-meal', async (req, res) => {
     try {
-        const { dailyCalories, mealSuggestion } = req.body;
-        const newMeal = new Meal({ dailyCalories, mealSuggestion });
+        const newMeal = new Meal(req.body);
         await newMeal.save();
-        res.json({ message: "Meal suggestion saved successfully!" });
+        res.json({ message: 'Meal suggestion saved', meal: newMeal });
     } catch (error) {
-        res.status(500).json({ error: "Failed to save meal suggestion" });
+        res.status(500).json({ error: error.message });
     }
 });
 
 // Start the server
+const PORT = 5000;
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
