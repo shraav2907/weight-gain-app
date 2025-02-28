@@ -25,9 +25,4 @@ function generateDiet(){
     <a href="dietpage.html">Product 1</a>
 
 }
-function generateExercise(){
-    window.location.href = "exercise.html";
 
-    
-
-}
