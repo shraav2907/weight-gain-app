@@ -1,0 +1,71 @@
+/* Body styling */
+body {
+    background-color: #ff74f6;
+    font-family: 'Arial', sans-serif;
+    color: #00ff0d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Title styling */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Card styling */
+div.bg-white {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for cards */
+div.bg-white:hover {
+    transform: translateY(-5px);
+}
+
+/* Heading inside the cards */
+div.bg-white h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2980b9;
+    margin-bottom: 10px;
+}
+
+/* Paragraph styling inside the cards */
+div.bg-white p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
+/* Button styling */
+button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #3498db;
+}
+
+/* Button focus effect */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.5);
+}
