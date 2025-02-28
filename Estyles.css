@@ -1,23 +1,4 @@
 /* Body styling */
-body {
-    background-color: #ff74f6;
-    font-family: 'Arial', sans-serif;
-    color: #00ff0d;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-/* Title styling */
-h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #2c3e50;
-    margin-bottom: 20px;
-}
-
-/* Card styling */
 div.bg-white {
     background-color: #ffffff;
     padding: 20px;
