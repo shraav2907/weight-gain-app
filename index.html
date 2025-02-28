@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Gain Helper</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Weight Gain Helper</h1>
+        <p>Let's help you gain weight in a healthy way!</p>
+    </header>
+
+    <section class="calculator">
+        <h2>Calculate Your Daily Calorie Needs</h2>
+        <label for="weight">Your current weight (kg):</label>
+        <input type="number" id="weight" placeholder="Enter weight in kg" required>
+        
+        <label for="height">Your height (cm):</label>
+        <input type="number" id="height" placeholder="Enter height in cm" required>
+
+        <label for="age">Your age:</label>
+        <input type="number" id="age" placeholder="Enter your age" required>
+
+        <label for="activity">Activity level:</label>
+        <select id="activity">
+            <option value="1.2">Sedentary (little or no exercise)</option>
+            <option value="1.375">Lightly active (light exercise/sports 1-3 days/week)</option>
+            <option value="1.55">Moderately active (moderate exercise/sports 3-5 days/week)</option>
+            <option value="1.725">Very active (hard exercise/sports 6-7 days a week)</option>
+        </select>
+
+        <button onclick="calculateCalories()">Calculate Calories</button>
+
+        <div id="result">
+            <p id="calories-output"></p>
+        </div>
+    </section>
+
+    <section class="tips">
+        <h2>Weight Gain Tips</h2>
+        <ul>
+            <li>Consume more calories than you burn.</li>
+            <li>Eat nutrient-dense foods like whole grains, lean meats, and healthy fats.</li>
+            <li>Have 5-6 small meals a day to increase calorie intake.</li>
+            <li>Strength training can help you build muscle mass.</li>
+            <li>Drink high-calorie smoothies or shakes for extra calories.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Weight Gain Helper. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
