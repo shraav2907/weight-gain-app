@@ -22,7 +22,10 @@ function calculateCalories() {
     document.getElementById("calories-output").innerText = `To gain weight, you should consume approximately ${Math.round(dailyCalories)} calories per day.`;
 }
 function generateDiet(){
-
+    let meals = ["Apple crumble", "roast ", "Orange", "Mango"]
+    let ingredients = ["Apple crumble", "Banana", "Orange", "Mango"]
+    let comparison = ["Apple crumble", "Banana", "Orange", "Mango"]
+    
     document.getElementById("meal-output").innerText = `Here is an ideal meal:`;
  
 
