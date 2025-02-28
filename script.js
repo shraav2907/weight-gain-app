@@ -40,5 +40,8 @@ function generateDiet(){
 
    
 }
+function falseButton(){
+    document.getElementById("false-button").innerText = 'This is a fake button'
 
+}
 
