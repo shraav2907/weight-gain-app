@@ -21,3 +21,11 @@ function calculateCalories() {
 
     document.getElementById("calories-output").innerText = `To gain weight, you should consume approximately ${Math.round(dailyCalories)} calories per day.`;
 }
+function generateDiet(){
+
+
+}
+function generateExercise(){
+    
+
+}
