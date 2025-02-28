@@ -22,14 +22,21 @@ function calculateCalories() {
     document.getElementById("calories-output").innerText = `To gain weight, you should consume approximately ${Math.round(dailyCalories)} calories per day.`;
 }
 function generateDiet(){
-    let meals = ["Apple crumble", "Roast Chicken", "Vegetable Curry", "Ramen", "salad", "Hommade burger", "Peanut Butter and pickle sandwich" ]
+    let meals = ["Apple crumble", "Roast Chicken", "Vegetable Curry", "Ramen", "salad", "Homemade burger", "Peanut Butter and pickle sandwich" ]
     let comparison = ["3 and a half eggs", "A banana milkshake", "A tablespoon of orange juice", "The colour green", "a 500g salt rock"] 
     let ingredients = ["Fresh Duck, carrots, fish, potatos and an egg", "Ripe Mangos, Apple crumble, potatos, sliced gerkins", "Lentils, guava, a red onion", "Miso soup, probably noodles, water, milk"]
 
     
-    document.getElementById("meal-output").innerText = `Here is an ideal meal :`;
- 
 
+    document.getElementById("meal-output").innerText = `Here is an ideal meal: ${meals[Math.floor(Math.random() * meals.length)]} `;
+    document.getElementById("ingredients-output").innerText = `Here is a list of the ingredients you will need:${ingredients[Math.floor(Math.random() * ingredients.length)]}, ${ingredients[Math.floor(Math.random() * ingredients.length)]}, ${ingredients[Math.floor(Math.random() * ingredients.length)]}`;
+    document.getElementById("comparison-output").innerText = `The number of calories is approximately equivelent to: ${comparison[Math.floor(Math.random() * comparison.length)]}`;
 
+    /**  -${ingredients[Math.floor(Math.random() * ingredients.length)]}
+    -${ingredients[Math.floor(Math.random() * ingredients.length)]}
+    -${ingredients[Math.floor(Math.random() * ingredients.length)]}
+    The number of calories of your meal is approximately 
+    -${comparison[Math.floor(Math.random() * comparison.length)]}'; */
 }
+
 
