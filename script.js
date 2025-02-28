@@ -19,7 +19,7 @@ function calculateCalories() {
     // To gain weight, aim for a caloric surplus (adding ~500 calories)
     let dailyCalories = tdee + 500;
 
-    document.getElementById("calories-output").innerText = `To gain weight, you should consume approximately ${Math.round(dailyCalories)} calories per day.`;
+    document.getElementById("calories-output").innerText = `To gain weight, you should consume approximately ${Math.round(dailyCalories)} calories per day.\n Here are some ways YOU can do this:\n Deadlift the nearest car to `;
 }
 function generateDiet(){
     <a href="dietpage.html">Product 1</a>
